@@ -2,6 +2,7 @@ package com.rqhua.demo.dagger2;
 
 import com.rqhua.demo.dagger2.bean.Bean;
 import com.rqhua.demo.dagger2.bean.CChildBean;
+import com.rqhua.demo.dagger2.bean.ChildBean;
 import com.rqhua.demo.dagger2.bean.User;
 import com.rqhua.demo.dagger2.component.BeanComponent;
 import com.rqhua.demo.dagger2.component.DaggerBeanComponent;
@@ -14,14 +15,14 @@ import java.util.List;
 public class Test {
     @Inject
     List<Bean> beans;
-//
-//    @Inject
-//    ChildBean childBean;
 
-//    @Inject
+    @Inject
+    ChildBean childBean;
+
+    @Inject
     CChildBean cChildBean;
 
-//    @Inject
+    @Inject
     User user;
 
     public Test() {
@@ -36,9 +37,9 @@ public class Test {
 
     public void test() {
         System.out.println(beans.toString());
-//        System.out.println(childBean.toString());
-//        System.out.println(cChildBean.toString());
-//        System.out.println(user.toString());
-//
+        System.out.println(childBean.toString());
+        System.out.println(cChildBean.toString());
+        System.out.println(user.toString());
+
     }
 }
